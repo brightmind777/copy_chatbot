@@ -1,19 +1,19 @@
 from flask import Flask, request, jsonify, render_template
 import os
 import requests
-from dotenv import load_dotenv
+
 import speech_recognition as sr
 from gtts import gTTS
 
 import TTSmodule
 
 # Load environment variables from a .env file
-load_dotenv()
+
 
 app = Flask(__name__)
 
 # Get the OpenAI API key from environment variables
-api_key = os.getenv('DEEPSEEK_API_KEY')
+
 
 def chat_with_openai(message):
     url = 'https://api.deepseek.com/chat/completions'
